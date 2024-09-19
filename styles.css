@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #e0f7fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0288d1;
+  padding: 10px 20px;
+  color: white;
+  height: 60px;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  flex: 1;
+}
+
+.welcome {
+  background: url("/rainy-cityscape-yellow-taxi-cab-in-urban-night-scene-photo-photos-big.webp")
+    no-repeat center center/cover;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  display: flex;
+  align-items: flex-end; /* Align content towards the bottom */
+  justify-content: center; /* Center horizontally */
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.welcome-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  width: 100%; /* Full width */
+  text-align: center; /* Center the text */
+  box-sizing: border-box;
+  margin-bottom: 20px; /* Push the text slightly upwards from the bottom */
+  color: white;
+  font-size: 2em; /* Adjust font size if needed */
+}
+
+.contact {
+  padding: 20px;
+  text-align: center;
+}
+
+.reviews {
+  padding: 20px;
+  background-color: #e0f7fa;
+  text-align: center;
+}
+
+/* Animation styles */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  background-color: #0288d1; /* Ensure the entire footer is blue */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%; /* Fix the width */
+}
+
+footer .social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 24px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: #ffcc00;
+  transform: scale(1.2);
+}
