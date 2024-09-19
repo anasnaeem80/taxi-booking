@@ -40,11 +40,13 @@ header nav ul li a:hover {
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: flex-end; /* Align content towards the bottom */
+  align-items: flex-end;
   justify-content: center;
   color: white;
   text-align: center;
   box-sizing: border-box;
+  opacity: 1;
+  transition: opacity 0.5s ease-out; /* Smooth fade transition */
 }
 
 .welcome-text {
