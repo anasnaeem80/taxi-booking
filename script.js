@@ -33,3 +33,19 @@ document.addEventListener(
     });
   })
 );
+
+document.addEventListener("scroll", function () {
+  const welcomeSection = document.querySelector(".welcome");
+  const scrollPosition = window.scrollY; // Get how far the user has scrolled
+  const windowHeight = window.innerHeight; // Get the viewport height
+
+  // Calculate the opacity, reducing as the user scrolls down
+  const opacity = 1 - scrollPosition / (windowHeight / 1.5); // Adjust factor for faster/slower fade
+
+  // Set the opacity, ensuring it doesn't go below 0
+  if (opacity >= 0) {
+    welcomeSection.style.opacity = opacity;
+  } else {
+    welcomeSection.style.opacity = 0;
+  }
+});
