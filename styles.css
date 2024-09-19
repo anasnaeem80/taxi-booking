@@ -1,77 +1,124 @@
+/* Dark theme for body */
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  background-color: #e0f7fa;
+  color: #f0f0f0; /* Light text for dark background */
+  background-color: #121212; /* Dark background */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   scroll-behavior: smooth;
 }
 
+/* Dark header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0288d1;
+  background-color: #1a1a1a; /* Darker header background */
   padding: 10px 20px;
-  color: white;
+  color: #f0f0f0; /* Light text color */
   height: 60px;
 }
 
-header nav ul {
-  display: flex;
-}
-
-header nav ul li {
-  margin-left: 20px;
-}
-
 header nav ul li a {
-  color: white;
+  color: #f0f0f0; /* Light color for links */
   text-decoration: none;
   font-weight: bold;
 }
 
-main {
-  flex: 1;
+header nav ul li a:hover {
+  color: #ffcc00; /* Accent color on hover */
 }
 
+/* Welcome Section */
 .welcome {
   background: url("/rainy-cityscape-yellow-taxi-cab-in-urban-night-scene-photo-photos-big.webp")
     no-repeat center center/cover;
   height: 100vh; /* Full viewport height */
   width: 100vw; /* Full viewport width */
-  margin: 0; /* Remove default margins */
-  padding: 0; /* Remove default padding */
+  margin: 0;
+  padding: 0;
   display: flex;
   align-items: flex-end; /* Align content towards the bottom */
-  justify-content: center; /* Center horizontally */
+  justify-content: center;
   color: white;
   text-align: center;
   box-sizing: border-box;
 }
 
 .welcome-text {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
-  width: 100%; /* Full width */
-  text-align: center; /* Center the text */
-  box-sizing: border-box;
-  margin-bottom: 20px; /* Push the text slightly upwards from the bottom */
-  color: white;
-  font-size: 2em; /* Adjust font size if needed */
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffcc00;
+  font-size: 2em;
+
+  /* Animation properties */
+  opacity: 0; /* Start hidden */
+  transform: translateY(30px); /* Start position (slightly lower) */
+  animation: fadeInText 1s ease-in-out 2s forwards; /* Delay the animation by 2 seconds */
 }
 
+/* Define the fade-in animation */
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+  }
+}
+
+/* Contact Section */
 .contact {
   padding: 20px;
+  background-color: #1a1a1a; /* Dark background */
   text-align: center;
 }
 
+.contact h2 {
+  color: #ffcc00; /* Accent color for headings */
+}
+
+.contact-info a {
+  color: #ffcc00; /* Light accent color for links */
+}
+
+/* Reviews Section */
 .reviews {
   padding: 20px;
-  background-color: #e0f7fa;
+  background-color: #1a1a1a; /* Dark background */
   text-align: center;
+}
+
+.reviews h2 {
+  color: #ffcc00; /* Accent color */
+}
+
+.review {
+  color: #f0f0f0; /* Light text color */
+}
+
+/* Footer */
+footer {
+  background-color: #000; /* Black footer */
+  color: #f0f0f0; /* Light text */
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+footer .social-icons a {
+  color: #ffcc00; /* Accent color for social icons */
+  margin: 0 10px;
+  font-size: 24px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: #00ffcc; /* Bright hover color */
+  transform: scale(1.2);
 }
 
 /* Animation styles */
@@ -84,24 +131,4 @@ main {
 .fade-in.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-footer {
-  background-color: #0288d1; /* Ensure the entire footer is blue */
-  color: white;
-  padding: 20px;
-  text-align: center;
-  width: 100%; /* Fix the width */
-}
-
-footer .social-icons a {
-  color: white;
-  margin: 0 10px;
-  font-size: 24px;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-footer .social-icons a:hover {
-  color: #ffcc00;
-  transform: scale(1.2);
 }
